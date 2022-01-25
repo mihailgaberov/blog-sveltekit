@@ -1,4 +1,6 @@
-# SvelteKit static blog starter
+# New blog with SvelteKit
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58517acc-241d-42fa-a17c-bf3bdbe5e0e3/deploy-status)](https://app.netlify.com/sites/flamboyant-benz-6e653e/deploys)
 
 This starter contains everything you need to get up and running with [SvelteKit](https://kit.svelte.dev/) as a static site generator for your Markdown (and Svelte)-powered blog. [Check out the demo here](https://sveltekit-static-starter.netlify.app/), or view the [GitHub repo here](https://github.com/josh-collinsworth/sveltekit-blog-starter).
 
