@@ -17,7 +17,7 @@
 
 
 <svelte:head>
-	<title>SvelteKit Static Blog Starter</title>
+	<title>Personal blog by Mihail Gaberov.</title>
 </svelte:head>
 
 
