@@ -1,25 +1,21 @@
 <script>
-import { space } from "svelte/internal";
-
+  import MainNav from './MainNav.svelte'
+  import { siteAuthor } from '$lib/config'
 </script>
-<footer>
-    <span>twitter | github</span>
-    <span>© Mihail Gaberov 2022. All rights reserved.</span>
-</footer>
 
-  <style>
-    footer {
-        padding: 1rem;
-        background: lightskyblue;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    
-      span:first-child {
-        margin: 0;
-        list-style-type: none;
-        display: flex;
-        gap: 1rem;
-      }
-  </style>
+<footer>
+  <MainNav />
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/api/rss.xml" rel="external">RSS</a>
+      </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ul>
+  </nav>
+
+  <p>&copy;2018-{new Date().getFullYear()} {siteAuthor}</p>
+</footer>
