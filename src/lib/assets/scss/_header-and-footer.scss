@@ -33,11 +33,48 @@ footer {
 }
 
 header {
-  background: var(--lightAccent);
+  path {
+    transform-origin: 50% 0%;
+  }
+  .background--custom {
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  @keyframes path0 {
+    0% {
+      transform: rotate(-40deg);
+    }
+    100% {
+      transform: rotate(40deg);
+    }
+  }
+  @keyframes path1 {
+    0% {
+      transform: rotate(40deg);
+    }
+    100% {
+      transform: rotate(-40deg);
+    }
+  }
+  @keyframes path2 {
+    0% {
+      transform: rotate(60deg);
+    }
+    100% {
+      transform: rotate(-60deg);
+    }
+  }
+  // background: var(--lightAccent);
   color: var(--darker);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
   @media (min-width: vars.$smMin) {
     justify-content: center;
