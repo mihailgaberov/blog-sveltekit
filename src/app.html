@@ -1,18 +1,50 @@
 <!DOCTYPE html>
+<!-- ____  __.                                                 
+|    |/ _|____   ____ ______    ___.__. ____  __ _________ 
+|      <_/ __ \_/ __ \\____ \  <   |  |/  _ \|  |  \_  __ \
+|    |  \  ___/\  ___/|  |_> >  \___  (  <_> )  |  /|  | \/
+|____|__ \___  >\___  >   __/   / ____|\____/|____/ |__|   
+        \/   \/     \/|__|      \/                         
+                     .__                                        
+   ____   _________  |  |   ______ _____ __  _  _______  ___.__.
+  / ___\ /  _ \__  \ |  |  /  ___/ \__  \\ \/ \/ /\__  \<   |  |
+ / /_/  >  <_> ) __ \|  |__\___ \   / __ \\     /  / __ \\___  |
+ \___  / \____(____  /____/____  > (____  /\/\_/  (____  / ____|
+/_____/            \/          \/       \/             \/\/     
+  _____                          __  .__            
+_/ ____\______  ____   _____   _/  |_|  |__   ____  
+\   __\\_  __ \/  _ \ /     \  \   __\  |  \_/ __ \ 
+ |  |   |  | \(  <_> )  Y Y  \  |  | |   Y  \  ___/ 
+ |__|   |__|   \____/|__|_|  /  |__| |___|  /\___  >
+                           \/             \/     \/ 
+  __                .__  .__          
+_/  |________  ____ |  | |  |   ______
+\   __\_  __ \/  _ \|  | |  |  /  ___/
+ |  |  |  | \(  <_> )  |_|  |__\___ \ 
+ |__|  |__|   \____/|____/____/____  >
+				   \/ 
+-->
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		%svelte.head%
-		<!-- You can replace this block to update the Google fonts used in the project -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,600;1,600&display=swap" rel="stylesheet">  		
-		<!-- End Google Fonts block -->
 
-		<!-- You can add global <meta> tags here, but anything not global or dynamic should be a `<svelte:head>` tag on the proper page(s) instead. -->
+		<meta name="theme-color" content="#ffd100">
+
+		<script>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (
+				'theme' in localStorage && JSON.parse(localStorage.theme) === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.add('light');
+			}
+		</script>
+
+		%svelte.head%
 	</head>
 	<body>
 		<div id="svelte">%svelte.body%</div>
