@@ -1,12 +1,12 @@
-@use './typography';
-@use './layout';
-@use './components';
-@use './header-and-footer';
-@use './forms';
-@use './animation';
-@use './utilities';
-@use './code';
-@use './prism';
+@import './typography';
+@import './layout';
+@import './components';
+@import './header-and-footer';
+@import './forms';
+@import './animation';
+@import './utilities';
+@import './code';
+@import './prism';
 
 *:focus {
   outline: 2px solid var(--accent);
@@ -17,12 +17,56 @@ main:focus {
   outline: none;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+*:focus,
+input[type="checkbox"]:focus + label {
+  outline: 2px solid var(--lightBlue);
+  outline-offset: 1px;
+}
+
+main:focus {
+	outline: none;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--highlightColor); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: var(--yellow);
+  color: var(--highlightColor); /* Gecko Browsers */
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: calc(var(--eighthNote) * 0.25);
+}
+  
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  /* the "track" of the bar - great for customizing "background" colors */
+  background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+  /* the actual draggable element, the star of the show! */
+  background: var(--yellow);
+}
+
 body {
-  margin: 0;
-  min-height: 100vh;
+  font-family: var(--bodyFont);
   color: var(--ink);
-  font-family: var(--primaryFont);
-  background: var(--paper);
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+}
+
+html, body {
+  scrollbar-color: var(--yellow) transparent;
+  scrollbar-width: thin;
 }

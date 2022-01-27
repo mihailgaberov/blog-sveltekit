@@ -26,7 +26,7 @@ h1 {
     bottom: 0;
   }
 
-  @media (min-width: vars.$smMin) {
+  @media (min-width: vars.$xs) {
     font-size: 3.2rem;
   }
 
@@ -38,7 +38,7 @@ h1 {
 h2 {
   font-size: 2.1rem;
   
-  @media (min-width: vars.$smMin) {
+  @media (min-width: vars.$xs) {
     font-size: 2.3rem;
   }
 }

@@ -1,5 +1,5 @@
 <script>
-  import { currentPage, isMenuOpen } from '$lib/assets/js/store'
+  import { currentPage, isMenuOpen } from '$lib/data/store'
 
   export let href
 
