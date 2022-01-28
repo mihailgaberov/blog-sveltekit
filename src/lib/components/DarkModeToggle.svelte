@@ -59,13 +59,14 @@
 
 <style lang="scss" global>
   #dark-mode-toggle {
+    z-index: -1;
     background: var(--buttonBackground);
 
     &:hover,
     &:focus {
       svg {
         path, circle {
-          stroke: var(--yellow);
+          stroke: var(--orange);
         }
       }
     }

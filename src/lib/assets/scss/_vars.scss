@@ -23,6 +23,9 @@ $xxxl: 2200px;
   --white: #fff;
   --black: #152030;
 
+  --orangeHSL: 22, 100%, 54%;
+  --orange: hsl(var(--orangeHSL));
+	
   --ink: var(--slate);
   --paper: var(--background);
   
@@ -43,4 +46,60 @@ $xxxl: 2200px;
   @media (min-width: $lgMin) {
     font-size: 1.25rem;
   }
+
+
+	--maxWidth: 34rem;
+	--sidebarWidth: 15rem;
+	--margin: var(--quarterNote);
+
+	--eighthNote: calc(var(--quarterNote) / 2);
+	--quarterNote: 1.25rem;
+	--halfNote: calc(var(--quarterNote) * 2);
+	--dottedHalfNote: calc(var(--quarterNote) * 3);
+	--wholeNote: calc(var(--quarterNote) * 4);
+	--dottedWholeNote: calc(var(--quarterNote) * 6);
+
+	--buttonSize: 2.2rem;
+	--buttonBackground: var(--paper);
+
+	@media (min-width: $xs) {
+		--margin: var(--halfNote);
+	}
+	
+	@media (min-width: $sm) {
+		--margin: var(--dottedHalfNote);
+	}
+	
+	@media (min-width: $xxl) {
+		--margin: var(--wholeNote);
+	}
+	
+	@media (min-width: $xxxl) {
+		--margin: var(--dottedWholeNote);
+	}
+
+	&.dark {
+		--paper: var(--black);
+		--paperHSL: var(--blackHSL);
+		--ink: var(--white);
+		--headingColor: var(--white);
+		--accentColor: var(--lightBlue);
+		--linkColor: var(--lightBlue);
+		--highlightColor: var(--darkerGray);	
+	}
+
+	// Ensures media query only runs if a theme has not been set AND the user prefers dark color schemes
+	&:not(.light) {
+		@media (prefers-color-scheme: dark) {
+			--paper: var(--black);
+			--paperHSL: var(--blackHSL);
+			--ink: var(--white);
+			--headingColor: var(--white);
+			--accentColor: var(--lightBlue);
+			--linkColor: var(--lightBlue);
+			--highlightColor: var(--darkerGray);
+		}
+	}
+
+	font-size: var(--bodyFontSize);
 }

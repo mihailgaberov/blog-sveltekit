@@ -1,4 +1,15 @@
-.sr-only {
+@use './vars';
+
+.no-bullets {
+  list-style-type: none !important;
+
+  li::marker {
+    content: none !important;
+  }
+}
+
+.sr,
+input[type=checkbox] {
   position: absolute;
   left: -100vw;
   opacity: 0;
@@ -11,7 +22,19 @@
   clip-path: inset(50%);
 }
 
-.no-bullets {
-  list-style-type: none;
-  padding-left: 0;
+.compressed-content {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: vars.$xs) {
+    max-width: var(--maxWidth);
+  }
+
+  &.wider {
+    max-width: calc(var(--maxWidth) * 1.5);
+  }
+
+  &.double-wide {
+    max-width: calc(var(--maxWidth) * 2);
+  }
 }

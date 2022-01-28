@@ -71,7 +71,7 @@
     contain: layout;
     overflow: hidden;
     position: relative;
-    z-index: 0;
+    z-index: -1;
     font-size: 1.1rem;
     min-height: 2.2rem;
 
