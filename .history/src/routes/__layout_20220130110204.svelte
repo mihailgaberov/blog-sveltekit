@@ -16,12 +16,13 @@
   import '$lib/assets/scss/global.scss'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import { currentPage, isLoading } from '$lib/data/store'
+  import { currentPage, isMenuOpen, isLoading } from '$lib/data/store'
   import { navItems } from '$lib/config'
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import Loader from '$lib/components/Loader.svelte'
   import PageTransition from '$lib/components/PageTransition.svelte';
+  import PageHeading from '$lib/components/PageHeading.svelte';
 
   export let path
   
@@ -35,6 +36,21 @@
     navItems.forEach(item => prefetch(item.route))
   })
 </script>
+<!-- 
+<div class="layout" class:open={$isMenuOpen}>
+  <Header />
+  {#key path}
+    <main
+      id="main"
+      tabindex="-1"
+      in:fade={transitionIn}
+      out:fade={transitionOut}
+    >
+      <slot />
+    </main>
+  {/key}
+  <Footer />
+</div> -->
 
 <div id="app">
 	<Loader loading={$isLoading}/>
@@ -42,6 +58,7 @@
 	<Header /> 
 
 	<div class="layout"> 
+		<!-- <PageHeading title={path} /> -->
 
 		<PageTransition refresh={path}>
 			<slot/>

@@ -60,7 +60,7 @@
 <style lang="scss" global>
   #dark-mode-toggle {
     background: var(--buttonBackground);
-    
+
     &:hover,
     &:focus {
       svg {

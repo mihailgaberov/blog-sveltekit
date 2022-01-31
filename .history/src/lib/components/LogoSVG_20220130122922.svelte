@@ -10,7 +10,7 @@
     height: 6.6rem;
     display: inline-block;
     border-radius: 50%;
-    box-shadow: inset 0 0 10px #c5ffdf;
-    background: radial-gradient(#f9dc4a 50%, #aaf659);
+    box-shadow: inset 0 0 10px #000;
+    background: radial-gradient(#f9dc4a 50%, #ff0000);
   }
 </style>

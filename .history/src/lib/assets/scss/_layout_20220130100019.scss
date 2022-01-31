@@ -13,6 +13,7 @@ main {
   max-width: 42rem;
   margin: 6rem auto;
   padding: 0 1rem;
+  z-index: -1;
 }
 
 .layout {
@@ -28,6 +29,7 @@ main {
   width: 2.88rem;
   height: 2.88rem;
   border-radius: 50%;
+  z-index: -1;
 }
 
 img {

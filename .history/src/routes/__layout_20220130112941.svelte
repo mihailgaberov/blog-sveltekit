@@ -16,7 +16,7 @@
   import '$lib/assets/scss/global.scss'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import { currentPage, isLoading } from '$lib/data/store'
+  import { currentPage, isMenuOpen, isLoading } from '$lib/data/store'
   import { navItems } from '$lib/config'
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'

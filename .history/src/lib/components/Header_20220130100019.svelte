@@ -107,7 +107,7 @@
 
   .logo {
     width: auto;
-    height: 6.6rem;
+    height: 2rem;
     display: block;
 
     @media (min-width: $xxl) and (min-height: $md) {
