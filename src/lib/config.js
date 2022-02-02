@@ -1,5 +1,5 @@
-export const siteTitle = 'Mihailizing'
-export const siteDescription = 'Personal blog by Mihail Gaberov. Learning by sharing.'
+export const siteTitle = 'Mihail Gaberov'
+export const siteDescription = 'Learning by sharing.'
 export const siteURL = 'mihail-gaberov.eu'
 export const siteLink = 'https://mihail-gaberov.eu'
 export const siteAuthor = 'Mihail Gaberov'
