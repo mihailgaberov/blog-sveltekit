@@ -5,7 +5,6 @@
   import HamburgerMenuButton from './HamburgerMenuButton.svelte'
 </script>
 
-<!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
 <nav class="main-nav" class:open={$isMenuOpen}>
   <ul>
     {#each navItems as page}

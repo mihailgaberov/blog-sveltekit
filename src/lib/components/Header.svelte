@@ -13,7 +13,6 @@
     if ($isMenuOpen) toggleMenu();
   };
 
-  // I don't love any part of this, but it's necessary to make the "skip to main content" link work properly, so we'll live with it.
   const focusMain = (e: Event): void => {
     e.preventDefault();
     const main = document.querySelector("main");
@@ -23,26 +22,16 @@
 
 <div>
   <header class="header">
-    <a
-      on:click|preventDefault={focusMain}
-      class="skip-to-content-link"
-      href="#main"
-    >
+    <MainNav />
+    <a on:click|preventDefault={focusMain} class="skip-to-content-link" href="#main">
       Skip to main content
     </a>
-
     <a href="/" class="logo" on:click={handleClick}>
       <LogoSVG />
     </a>
-
-    <div
-      class="icon-container"
-      class:sticky={$isMenuOpen}
-      class:ghosty={$isScrollingDown && !$isMenuOpen}
-    >
+    <div class="icon-container" class:sticky={$isMenuOpen} class:ghosty={$isScrollingDown && !$isMenuOpen}>
       <DarkModeToggle />
       <HamburgerMenuButton closeOnly={false} />
-      <MainNav />
     </div>
     <svg
       class="background--custom"

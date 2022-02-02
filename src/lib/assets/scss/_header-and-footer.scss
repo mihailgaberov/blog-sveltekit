@@ -37,6 +37,7 @@ header {
     transform-origin: 50% 0%;
   }
   .background--custom {
+    z-index: -1;
     background-color: #FFFFFF;
     position: absolute;
     width: 100vw;

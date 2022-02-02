@@ -1,6 +1,6 @@
 <script>
 import { siteTitle } from '$lib/config'
-</script> -->
+</script>
 
 
 <svelte:head>
