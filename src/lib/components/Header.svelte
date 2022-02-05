@@ -25,14 +25,18 @@
     <a on:click|preventDefault={focusMain} class="skip-to-content-link" href="#main">
       Skip to main content
     </a>
-    <a href="/" class="logo" on:click={handleClick}>
-      <LogoSVG />
-    </a>
-    <MainNav />
+    
     <div class="icon-container" class:sticky={$isMenuOpen} class:ghosty={$isScrollingDown && !$isMenuOpen}>
       <DarkModeToggle />
       <HamburgerMenuButton closeOnly={false} />
     </div>
+
+    <a href="/" class="logo" on:click={handleClick}>
+      <LogoSVG />
+    </a>
+    
+    <MainNav />
+    
     <svg
       class="background--custom"
       id="demo"
